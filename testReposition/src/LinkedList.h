@@ -15,7 +15,7 @@ typedef Node *n;
 class LinkedList {
 public:
 	  void Add(int v);
-		    int Delete(int v);
+		    void Delete(int v);
 		    bool isEmpty() { return First == NULL; } ;
 		    void Show();
 		    void next();

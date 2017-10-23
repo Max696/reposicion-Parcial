@@ -22,6 +22,10 @@ void Stack::Push(Node*&stack,int _value)
 	aux->next=stack;
 	stack = aux;
 }
+void Node::Push(int s)
+{
+	Push(stack,s);
+}
 void Stack::Pop(Node*&stack, int &_value)
 {
 	Node* aux;
@@ -31,7 +35,7 @@ void Stack::Pop(Node*&stack, int &_value)
 	delete aux;// aux is deleted
 }
 //solucion problema 2
-Node Stack::replace(Node*& stack,int newint, int old)
+ Stack::replace(Node*& stack,int newint, int old)
 {
 	Node* aux;
 	Node* temporary;
@@ -49,4 +53,9 @@ Node Stack::replace(Node*& stack,int newint, int old)
 
 }
 
+void Stack::replace(int newint,int old)
+{
+	replace(stack,newint,old);
+
+	}
 

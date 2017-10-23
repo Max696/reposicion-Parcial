@@ -35,7 +35,7 @@ void LinkedList::Add(int data )
 
    }
 }
-int LinkedList::Delete(int data)
+void LinkedList::Delete(int data)
 {
  Node *last;
 	 Node *aux;
@@ -47,7 +47,7 @@ int value = First->value;
      last=aux;
      aux=aux-> next;
    }
-   if(!aux||aux->value !=data)return value;
+   if(!aux||aux->value !=data)return ;
    else {
       if(!last)
       {
@@ -95,27 +95,37 @@ int LinkedList::getsize()
 {
 	return size;
 }
+
+//v2.0 with recursion
 LinkedList LinkedList::Merge(LinkedList list1,LinkedList list2)
 {
-	LinkedList returnList;
-	/*
-	foreach(var s in list1)
+	LinkedList returnlist;
+	if (list1.size = 0 || list2.size =0)
 	{
-		returnList.add(s);
+	  return returnList	;
 	}
-	foreach(var t in list2)
+
+	else if (list1->First->value < list2->First->value )
 	{
+		returnlist.Add(list1.Value)
+				list1.Delete(list1->First->value);
+		Merge(list1,list20;)
 
 	}
-	*/
-
-	for(int i = 0; i<list1.size(); i++) {
-			returnList.Add(list1.Delete(0));
-		}
-	for(int i= list1.size();i<list2.size(0);i++)
+	else if (list->First->value)
 	{
-		returnList.Add(list2.Delete(0));
+		returnlist.Add(list2->First->value);
+				list2.Delete(list2->First->Value);
+				Merge(list1,list2);
 	}
+
+	else
+	{
+		return returnlist;
+	}
+	}
+}
+
 
 LinkedList::~LinkedList() {
 	// TODO Auto-generated destructor stub

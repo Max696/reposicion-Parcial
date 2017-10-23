@@ -14,8 +14,11 @@ public:
 	virtual ~Stack();
 	Node*stack;
 	void Push(Node*&, int);
+	void Push(int s );
 	void Pop(Node*&,int&);
-	Node replace(Node*& node1,int newInt, int old);//problema 2
+	void replace(Node*& node1,int newInt, int old);//problema 2
+	void replace(int newint, int old);
+	void isEmpty;
 };
 
 #endif /* STACK_H_ */
