@@ -16,7 +16,7 @@ using namespace std;
 
 int main() {
 	//cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-
+// The solution of the problemas are in the nedded structures (list for example)
 	//tests
 	LinkedList prueba ;
 	/*Stack prueba1 ;
